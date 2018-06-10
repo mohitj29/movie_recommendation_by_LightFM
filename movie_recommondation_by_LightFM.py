@@ -17,7 +17,7 @@ model = LightFM(loss = 'warp') # defining the loss function
 
 model.fit(data['train'], epochs=50, num_threads = 4) # training the model
 
-# created a function to recommend movies to the user
+# created a function to recommend movies to the user 
 def my_rec(model,data, user_ids):  # trained model, our dataset, and the userid
   n_users,n_item = data['train'].shape  # calculating the number of user and movies
   for id in user_ids:
